@@ -35,5 +35,17 @@ cacheSolve <- function(x, ...) {
 
 runtest <- function(x){
         x_Matrix<-makeCacheMatrix(x)
-        cacheSolve(x_Matrix)
+        print(x_Matrix)
+        print("************ Pass 1 **************")
+        print(cacheSolve(x_Matrix))
+        print("************ Pass 2 **************")
+        print(cacheSolve(x_Matrix))
+        print("************ Double matrix *******")
+        x_Matrix$set(x*2)
+        print(x_Matrix$get())
+        
+        print("************ Pass 3 **************")
+        print(cacheSolve(x_Matrix))
+        print("************ Pass 2 **************")
+        print(cacheSolve(x_Matrix))
 }
